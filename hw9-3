@@ -1,0 +1,28 @@
+
+
+def fibonacci(n):
+    if n < 2:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+
+def caching_fibonacci(cache=None):
+    if cache == None:
+        cache = {}
+    def inner(n):
+        if n not in cache:
+            print(f"calculating:{n}")
+            cache[n]= fibonacci(n)
+            return cache[n]
+        else:
+            return cache[n]
+    return inner
+
+fun = caching_fibonacci(cache={8:21,9:34})
+print(fun(8) )    
+print(fun(8) )    
+print(fun(9) )    
+print(fun(11) )   
+print(fun(12) )   
+print(fun(13) )    
