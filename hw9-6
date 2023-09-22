@@ -1,0 +1,20 @@
+import re
+
+def generator_numbers(string=""):
+    # print(string)
+    s = string
+    numbers = re.findall('\d+', s)
+    for i in numbers:
+        yield i
+    
+    
+def sum_profit(string):
+    sum = 0
+    list = generator_numbers(string)
+    for i in list:
+        sum += int(i)
+    return sum
+    
+
+
+print(sum_profit("qwert 43 sdrtf 3 asdfc  345 "))

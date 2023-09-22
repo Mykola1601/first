@@ -1,0 +1,30 @@
+def format_phone_number(func):
+    def inner(phone):
+        new = func(phone)
+        print(f"phone = {new}")
+        if len(new)==10:
+            print("10dig")
+            return "+38"+new
+        else:
+            print("12dig")
+            return "+"+new
+    return inner    
+
+
+    
+@format_phone_number
+def sanitize_phone_number(phone):
+    new_phone = (
+        phone.strip()
+            .removeprefix("+")
+            .replace("(", "")
+            .replace(")", "")
+            .replace("-", "")
+            .replace(" ", "")
+    )
+    return new_phone
+
+
+
+# format_phone_number("093 560 95 16")
+sanitize_phone_number("093 560 95 16")
