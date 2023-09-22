@@ -1,0 +1,6 @@
+def normal_name(list_name):
+    # print(list_name)
+    res = []
+    for i in map(lambda name: name.title(), list_name):
+        res.append (i) 
+    return res

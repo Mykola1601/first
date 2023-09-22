@@ -1,26 +1,11 @@
-def cost_00 (price ):
-    return price 
-def cost_05 (price):
-    return price*(1-0.05)
-def cost_10 (price):
-    return price*(1-0.10)
-def cost_15 (price):
-    return price*(1-0.15)
-def cost_25 (price):
-    return price*(1-0.25)
 
-
-DISCOUNT = {
-    0.25: cost_25,
-    0.15: cost_15,
-    0.10: cost_10,
-    0.05: cost_05,
-    0.0: cost_00,
-}
 
 def discount_price(discount):
-    # print(discount)
-    return DISCOUNT[float(discount)]
+    def discount_(price):
+        price = price * (1-discount)
+        return price
+    return discount_
+
 
 
 cost_15 = discount_price(0.15)

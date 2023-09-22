@@ -1,0 +1,6 @@
+def get_emails(list_contacts):
+    res =  []
+    for i in map(lambda email: email["email"], list_contacts):
+        print(i)
+        res.append (i) 
+    return res
