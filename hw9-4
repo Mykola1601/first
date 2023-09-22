@@ -1,10 +1,10 @@
 
 
 def discount_price(discount):
-    def discount_(price):
+    def dis(price):
         price = price * (1-discount)
         return price
-    return discount_
+    return dis
 
 
 

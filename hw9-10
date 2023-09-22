@@ -1,0 +1,8 @@
+def get_favorites(contacts):
+    # print(contacts)
+    res = []
+    for i in filter(lambda x: x["favorite"], contacts):
+        print(i)
+        res.append(i)  
+    return res
+    
