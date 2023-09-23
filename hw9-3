@@ -1,4 +1,3 @@
-
 def caching_fibonacci(cache=None):
     if cache == None:
         cache = {}
@@ -9,11 +8,9 @@ def caching_fibonacci(cache=None):
             cache[n] = n
             return n
         else:
-            # print (cache)
             cache[n] =  fibonacci(n-1) + fibonacci(n-2)
             print("calculating")
             return cache[n]
-    
     return fibonacci
 
 
