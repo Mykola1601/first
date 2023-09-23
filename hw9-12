@@ -1,12 +1,9 @@
 from functools import reduce
 
-
 def amount_payment(payment):
     res = []
     for i in filter(lambda x: x>0, payment):
         res.append(i)  
     return  reduce((lambda x, y: x + y), res)
-
-
 
 
